@@ -14,7 +14,7 @@ Resources:
 + Github Resource:
 Kha Vo and Jitendra Jonnagaddala and Siaw-Teng Liaw. (2019). Medical-Record-Linkage-Ensemble. Retrieved from https://github.com/ePBRN/Medical-Record-Linkage-Ensemble. Paper: "Statistical supervised meta-ensemble algorithm for data linkage"
 
-Original Paper:
++ Original Paper:
 Kha Vo, Jitendra Jonnagaddala, Siaw-Teng Liaw, Statistical supervised meta-
 ensemble algorithm for medical record linkage, Journal of Biomedical Informatics, Volume 95, 2019, 103220, ISSN 1532-0464, https://doi.org/10.1016/j.jbi.2019.103220.
 
