@@ -18,7 +18,7 @@ Kha Vo and Jitendra Jonnagaddala and Siaw-Teng Liaw. (2019). Medical-Record-Link
 Kha Vo, Jitendra Jonnagaddala, Siaw-Teng Liaw, Statistical supervised meta-
 ensemble algorithm for medical record linkage, Journal of Biomedical Informatics, Volume 95, 2019, 103220, ISSN 1532-0464, https://doi.org/10.1016/j.jbi.2019.103220.
 
-+ Additional Resources:
+Additional Resources:
 + Ahmad Anis. Pytorch LSTM: The Definitive Guide. Mar. 2022. URL: https://cnvrg.io/pytorch-lstm/.
 
 + Improving LBFGS algorithm in pytorch. URL: http://sagecal.sourceforge.net/pytorch/index.html#:̃:text=Closure,documentation%5C%2C%5C%20with%5C%20a%5C%20small%5C%20modification.
