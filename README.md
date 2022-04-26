@@ -1,5 +1,7 @@
 # Medical-Record-Linkage-Ensemble Paper Reproduction
 
+## Course: Deep Learning for Healthcare, Gargi Deb
+
 This repository contains two notebooks one for each dataset (FEBRL and ePBRN) and utilizes the code provided by the authors of the original paper, [Statistical supervised meta-ensemble algorithm for medical record linkage](https://www.sciencedirect.com/science/article/pii/S1532046419301388?via%3D), to reproduce its results and claims and also builds on top of for additional ablations and experiments.
 
 
@@ -23,6 +25,13 @@ ensemble algorithm for medical record linkage, Journal of Biomedical Informatics
 ## Requirements
 
 All code is run sucessfully in Google Colab Pro environment with Python 3.6. You will need a Google Colab Pro Account to run the notebooks on. Google Colab already comes with a lot of default ML packages installed and does not require additional installation. The only package used by the authors that is not installed in Google Colab Pro is [`record_linkage`](https://recordlinkage.readthedocs.io/en/latest/about.html). There is a cell in each runbook that when it is ran in Google Colab Pro, it will install the package.
+
+Packages used:
+> `numpy`
+>`pandas` 
+>`sklearn`
+>`torch`
+>`recordlinkage`
 
 ## Training & Evaluation
 
