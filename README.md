@@ -1,41 +1,52 @@
 # Medical-Record-Linkage-Ensemble Paper Reproduction
 
-Course: Deep Learning for Healthcare
-by Gargi Deb
+This repository contains two notebooks one for each dataset (FEBRL and ePBRN) and utilizes the code provided by the authors of the original paper, [Statistical supervised meta-ensemble algorithm for medical record linkage](https://www.sciencedirect.com/science/article/pii/S1532046419301388?via%3D), to reproduce its results and claims and also builds on top of for additional ablations and experiments.
 
-This repo contains two notebooks one for each dataset (FEBRL and ePBRN) and utilizes the code provided by the authors of the original paper to reproduce its results and claims and also build on top of for additional ablations and experiments.
 
-Authors of the original paper: 
-Kha Vo <kha.vo@unsw.edu.au>,
-Jitendra Jonnagaddala <jitendra.jonnagaddala@unsw.edu.au>,
-Siaw-Teng Liaw <siaw@unsw.edu.au>.
+>Authors of the original paper: 
+> + Kha Vo <kha.vo@unsw.edu.au>,
+> + Jitendra Jonnagaddala <jitendra.jonnagaddala@unsw.edu.au>,
+> + Siaw-Teng Liaw <siaw@unsw.edu.au>.
 
-Resources:
-+ Github Resource:
-Kha Vo and Jitendra Jonnagaddala and Siaw-Teng Liaw. (2019). Medical-Record-Linkage-Ensemble. Retrieved from https://github.com/ePBRN/Medical-Record-Linkage-Ensemble. Paper: "Statistical supervised meta-ensemble algorithm for data linkage"
+> Resources used to reproduce results:
+>
+> Original Code provided by authors:
+> 
+> Kha Vo and Jitendra Jonnagaddala and Siaw-Teng Liaw. (2019). Medical-Record-Linkage-Ensemble. Retrieved from https://github.com/ePBRN/Medical-Record-Linkage-Ensemble. Paper: "Statistical supervised meta-ensemble algorithm for data linkage"
 
-+ Original Paper:
-Kha Vo, Jitendra Jonnagaddala, Siaw-Teng Liaw, Statistical supervised meta-
+> Original Paper:
+> 
+>Kha Vo, Jitendra Jonnagaddala, Siaw-Teng Liaw, Statistical supervised meta-
 ensemble algorithm for medical record linkage, Journal of Biomedical Informatics, Volume 95, 2019, 103220, ISSN 1532-0464, https://doi.org/10.1016/j.jbi.2019.103220.
 
-Additional Resources:
-+ Ahmad Anis. Pytorch LSTM: The Definitive Guide. Mar. 2022. URL: https://cnvrg.io/pytorch-lstm/.
 
-+ Improving LBFGS algorithm in pytorch. URL: http://sagecal.sourceforge.net/pytorch/index.html#:̃:text=Closure,documentation%5C%2C%5C%20with%5C%20a%5C%20small%5C%20modification.
+## Requirements
+
+All code is run sucessfully in Google Colab Pro environment with Python 3.6. You will need a Google Colab Pro Account to run the notebooks on. Google Colab already comes with a lot of default ML packages installed and does not require additional installation. The only package used by the authors that is not installed in Google Colab Pro is [`record_linkage`](https://recordlinkage.readthedocs.io/en/latest/about.html). There is a cell in each runbook that when it is ran in Google Colab Pro, it will install the package.
+
+## Training & Evaluation
+
+For training and evaluating the models, there are dedicated cells in each notebook that have the set hyperparameters and does not require any additional setup or commands, except just running the cell in Google Colab Pro.
 
 
-All code is run sucessfully in Google Colab Pro environment with Python 3.6.
+## Results
 
-Packages used:
-`numpy`
-`pandas` 
-`sklearn`
-`torch`
-`recordlinkage`
+The following baseline performance results are from the reproduction of the original paper, and not the original results as stated by the authors:
 
-1. Create a Google Colab Pro Account and upload the two files: `FEBRL(Source_A)_code.ipynb` and `ePBRN(Source_B)_code.ipynb` to Google Drive to then be accessed and run in Google Colab Pro environment.
 
-2. Obtain datasets required to run code. Download and save `febrl3_UNSW.csv`, `febrl3_UNSW.csv`, `ePBRN_D_dup.csv`, and `ePBRN_F_dup.csv` from the repo of the original paper found here https://github.com/ePBRN/Medical-Record-Linkage-Ensemble. These four files will then need to be uploaded as part of running the code.
+### FEBRN dataset (Source A):
 
-3. Run each cell for a notebook one a time, and follow the instructions (if any) above cell. The results for the models will be printed below the cell.
+| Model name  | Precision       | Recall         | F-Score
+| ----------- |---------------- | -------------- | ------------|
+| SVM         |     98.72%      |      99.63%    |    99.18%   |
+| NN          |     96.96%      |      99.43%    |    99.19%   |
+| LR          |     97.64%      |      99.63%    |    99.62%   |
+
+### FEBRN dataset (Source B):
+
+| Model name  | Precision       | Recall         | F-Score
+| ----------- |---------------- | -------------- | ------------|
+| SVM         |     31.78%      |      98.61%    |    48.07%   |
+| NN          |     69.20%      |      96.46%    |    80.59%   |
+| LR          |     59.06%      |      96.84%    |    73.37%   |
 
